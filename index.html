@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, rgb(44, 62, 80), rgb(52, 152, 219));
+      font-family: 'Arial', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      max-width: 1200px;
+      width: 100%;
+    }
+    .card {
+      background: rgb(52, 152, 219);
+      margin-bottom: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card-title {
+      color: rgb(255, 255, 255);
+    }
+    .card-text {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .btn-primary {
+      background-color: rgb(231, 76, 60);
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: rgb(204, 92, 76);
+    }
+    .input-group {
+      margin-bottom: 30px;
+    }
+    #card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Search for news">
+    <div class="input-group-append">
+      <button class="btn btn-light" onclick="apifatch()">Search</button>
+    </div>
+  </div>
+
+  <div id="card"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
